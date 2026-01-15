@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mongodb-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Piyushjangid01/mongo-db-menifest-.git
+    targetRevision: main
+    path: mongo-db-menifest-
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
