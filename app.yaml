@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Piyushjangid01/mongo-db-menifest-.git
     targetRevision: main
-    path: mongo-db-menifest-
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: dev
